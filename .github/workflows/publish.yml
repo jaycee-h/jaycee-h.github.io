@@ -1,0 +1,146 @@
+name: Publish F-Droid repo
+
+# Builds an F-Droid repository from the latest stable GitHub releases of every app in apps.yml and
+# publishes it (with the landing page) to the gh-pages branch, served at https://jaycee-h.github.io/.
+#
+# Runs on push to main, every 3 hours (to pick up new app releases), and on demand.
+# Scheduled runs only publish when an APK or listing actually changed.
+
+on:
+  push:
+    branches: [main]
+  schedule:
+    - cron: "17 */3 * * *"
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+concurrency:
+  group: publish
+  cancel-in-progress: false
+
+env:
+  REPO_URL: https://jaycee-h.github.io/repo
+  KEEP_VERSIONS: 3
+
+jobs:
+  publish:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v5
+
+      - name: Install fdroidserver
+        run: |
+          sudo apt-get update -qq
+          sudo apt-get install -y -qq fdroidserver qrencode >/dev/null
+          fdroid --version
+
+      - name: Build repo
+        env:
+          GH_TOKEN: ${{ github.token }}
+          FDROID_KEYSTORE_BASE64: ${{ secrets.FDROID_KEYSTORE_BASE64 }}
+          FDROID_KEYSTORE_PASS: ${{ secrets.FDROID_KEYSTORE_PASS }}
+        run: |
+          set -euo pipefail
+          mkdir -p work/repo/icons work/metadata
+          cp -r metadata/. work/metadata/
+          cp site/repo-icon.png work/repo/icons/icon.png
+          cd work
+
+          if [ -n "${FDROID_KEYSTORE_BASE64:-}" ] && [ -n "${FDROID_KEYSTORE_PASS:-}" ]; then
+            echo "$FDROID_KEYSTORE_BASE64" | base64 -d > keystore.p12
+            PASS="$FDROID_KEYSTORE_PASS"
+            echo "DEPLOY=true" >> "$GITHUB_ENV"
+          else
+            echo "::warning::FDROID_KEYSTORE_BASE64/FDROID_KEYSTORE_PASS not set: dry run with a throwaway key, nothing is published."
+            PASS="$(openssl rand -hex 16)"
+            keytool -genkeypair -keystore keystore.p12 -storetype PKCS12 -alias xeu-repo -keyalg RSA -keysize 2048 \
+              -validity 30 -storepass "$PASS" -keypass "$PASS" -dname "CN=dry run" >/dev/null 2>&1
+            echo "DEPLOY=false" >> "$GITHUB_ENV"
+          fi
+
+          {
+            echo "repo_url: $REPO_URL"
+            echo "repo_name: jaycee-h apps"
+            echo "repo_icon: icon.png"
+            echo "repo_description: >-"
+            echo "  Apps by jaycee-h, published from their GitHub releases. Stable releases only."
+            echo "archive_older: 0"
+            echo "keystore: keystore.p12"
+            echo "repo_keyalias: xeu-repo"
+            echo "keystorepass: \"$PASS\""
+            echo "keypass: \"$PASS\""
+            echo "keydname: CN=jaycee-h F-Droid Repo"
+            echo "sdk_path: $ANDROID_HOME"
+          } > config.yml
+          chmod 600 config.yml keystore.p12
+
+          # Latest stable releases of every app in apps.yml.
+          python3 -c 'import yaml; [print(a["package"], a["repo"]) for a in yaml.safe_load(open("../apps.yml"))["apps"]]' \
+            > apps.txt
+          while read -r pkg repo; do
+            echo "== $pkg from $repo"
+            gh release list -R "$repo" --exclude-pre-releases --exclude-drafts --limit "$KEEP_VERSIONS" \
+              --json tagName -q '.[].tagName' < /dev/null | while read -r tag; do
+              gh release download "$tag" -R "$repo" -p '*.apk' -D repo --skip-existing < /dev/null
+            done
+          done < apps.txt
+          ls -la repo
+
+          fdroid update --pretty
+
+          # Every listed app must be in the index.
+          python3 - <<'PY'
+          import json
+          idx = json.load(open("repo/index-v1.json"))
+          wanted = [l.split()[0] for l in open("apps.txt") if l.strip()]
+          missing = [p for p in wanted if not idx.get("packages", {}).get(p)]
+          for p in wanted:
+              vers = ", ".join(f'{v["versionName"]} ({v["versionCode"]})' for v in idx.get("packages", {}).get(p, []))
+              print(f"::notice::{p}: {vers or 'no versions'}")
+          if missing:
+              print(f"::error::Not in the index: {', '.join(missing)}")
+              raise SystemExit(1)
+          PY
+
+          FP="$(keytool -exportcert -alias xeu-repo -keystore keystore.p12 -storepass "$PASS" 2>/dev/null \
+            | sha256sum | cut -d' ' -f1 | tr a-f A-F)"
+          echo "Repo fingerprint: $FP"
+
+          # What the published content depends on; scheduled runs skip publishing when it hasn't changed.
+          DIGEST="$( (cd repo && sha256sum *.apk; cd .. && find ../metadata ../site ../scripts ../apps.yml -type f -exec sha256sum {} +) \
+            | sort | sha256sum | cut -d' ' -f1)"
+          echo "DIGEST=$DIGEST" >> "$GITHUB_ENV"
+
+          mkdir -p ../out
+          cp -r repo ../out/repo
+          qrencode -t SVG -m 0 -o - "$REPO_URL?fingerprint=$FP" | sed '1,/<svg/{/<svg/!d}' > qr.svg
+          python3 ../scripts/build_site.py repo ../site/index.html ../out/index.html "$REPO_URL" "$FP" qr.svg
+          echo "$DIGEST" > ../out/.source-digest
+          touch ../out/.nojekyll
+        shell: bash
+
+      - name: Check for changes
+        if: env.DEPLOY == 'true'
+        run: |
+          LIVE="$(git ls-remote --exit-code origin gh-pages >/dev/null 2>&1 \
+            && git fetch -q --depth 1 origin gh-pages && git show FETCH_HEAD:.source-digest 2>/dev/null || true)"
+          if [ "$GITHUB_EVENT_NAME" = schedule ] && [ "$LIVE" = "$DIGEST" ]; then
+            echo "No new releases or listing changes; nothing to publish."
+            echo "DEPLOY=false" >> "$GITHUB_ENV"
+          fi
+
+      - name: Publish to gh-pages
+        if: env.DEPLOY == 'true'
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          cd out
+          git init -q -b gh-pages
+          git -c user.name="pagnchanak" -c user.email="chea.pagnchanak@gmail.com" add -A
+          git -c user.name="pagnchanak" -c user.email="chea.pagnchanak@gmail.com" \
+            commit -q -m "Publish F-Droid repo (${GITHUB_SHA::7})"
+          # One commit, force-pushed: the branch never accumulates old APKs.
+          git push -q --force "https://x-access-token:${GH_TOKEN}@github.com/${GITHUB_REPOSITORY}.git" gh-pages
+          echo "::notice::Published to https://jaycee-h.github.io/"

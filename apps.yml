@@ -1,0 +1,6 @@
+# Apps published in this F-Droid repository.
+# Each entry: the Android package name and the GitHub repo whose (non-pre-release) releases carry the APK.
+# The listing for each app lives in metadata/<package>.yml (+ metadata/<package>/en-US/images/icon.png).
+apps:
+  - package: dev.xeu.forums
+    repo: XEU-Forums/xeu-forums-app
