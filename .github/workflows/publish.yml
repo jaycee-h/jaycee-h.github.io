@@ -31,10 +31,16 @@ jobs:
       - uses: actions/checkout@v5
 
       - name: Install fdroidserver
+        # Ubuntu's fdroidserver ships an androguard too old for APKs from current Android build tools,
+        # so use the latest release from PyPI.
         run: |
           sudo apt-get update -qq
-          sudo apt-get install -y -qq fdroidserver qrencode >/dev/null
-          echo "::notice::$(lsb_release -ds); fdroidserver $(fdroid --version 2>&1 | tail -n1)"
+          sudo apt-get install -y -qq qrencode >/dev/null
+          python3 -m venv "$RUNNER_TEMP/fdroid"
+          "$RUNNER_TEMP/fdroid/bin/pip" install -q --upgrade pip fdroidserver pyyaml
+          echo "$RUNNER_TEMP/fdroid/bin" >> "$GITHUB_PATH"
+          "$RUNNER_TEMP/fdroid/bin/pip" show fdroidserver androguard | grep -E '^(Name|Version)' | paste - - \
+            | sed 's/^/::notice::/'
 
       - name: Build repo
         env:
