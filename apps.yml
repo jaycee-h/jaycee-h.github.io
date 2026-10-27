@@ -4,3 +4,5 @@
 apps:
   - package: dev.xeu.forums
     repo: XEU-Forums/xeu-forums-app
+  - package: com.baidu.searchbox
+    repo: Andromi-Auto/andromi-auto

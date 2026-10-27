@@ -1,0 +1,25 @@
+# F-Droid listing for Andromi Auto (APKs come from the app repo's GitHub releases; see apps.yml).
+Categories:
+  - Connectivity
+  - System
+License: AGPL-3.0-only
+AuthorName: pagnchanak
+WebSite: https://github.com/Andromi-Auto/andromi-auto
+SourceCode: https://github.com/Andromi-Auto/andromi-auto
+IssueTracker: https://github.com/Andromi-Auto/andromi-auto/issues
+Changelog: https://github.com/Andromi-Auto/andromi-auto/releases
+
+AutoName: Andromi Auto
+Summary: Android Auto on the phone, shown on a Xiaomi car screen
+Description: |-
+  Andromi Auto runs Android Auto on your phone and shows it in its own window, so HyperOS
+  "Xiaomi Interconnectivity" can mirror it to the car screen.
+
+  * Self mode: no USB cable or wireless head unit needed
+  * Material 3 design with wallpaper (Monet) colours
+  * Portrait and landscape switch for the different car window sizes
+  * Optional automatic start when the car's Bluetooth connects (needs root setup)
+  * Built-in update check for stable releases
+
+  Based on Open Headunit (AGPL-3.0). Unofficial; not affiliated with Google, Xiaomi or Baidu.
+  Uses the install id com.baidu.searchbox, so it cannot be installed next to the real Baidu app.
