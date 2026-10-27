@@ -34,7 +34,7 @@ jobs:
         run: |
           sudo apt-get update -qq
           sudo apt-get install -y -qq fdroidserver qrencode >/dev/null
-          fdroid --version
+          echo "::notice::$(lsb_release -ds); fdroidserver $(fdroid --version 2>&1 | tail -n1)"
 
       - name: Build repo
         env:
@@ -91,7 +91,8 @@ jobs:
           ls -la repo
 
           if ! fdroid update --pretty > update.log 2>&1; then
-            tail -n 25 update.log | sed 's/^/::error::fdroid: /'
+            # Annotations are capped at 10 per step: show the last meaningful lines only.
+            grep -v '^\s*\^' update.log | tail -n 6 | sed 's/^/::error::fdroid: /'
             exit 1
           fi
           tail -n 5 update.log
