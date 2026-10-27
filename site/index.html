@@ -31,6 +31,12 @@
   .card { background: var(--surface); border-radius: 24px; padding: 20px; margin-bottom: 14px; }
   .btn { display: block; text-align: center; background: var(--accent); color: #fff; text-decoration: none;
          font-weight: 600; padding: 14px 18px; border-radius: 999px; }
+  .badge { display: block; width: fit-content; margin: 0 auto; border-radius: 14px;
+           transition: transform .15s ease, filter .15s ease; }
+  .badge img { display: block; width: 257px; max-width: 100%; height: auto; }
+  .badge:hover { transform: translateY(-1px); filter: brightness(1.06); }
+  .badge:active { transform: scale(.98); }
+  .hint { text-align: center; color: var(--muted); font-size: 13px; margin: 8px 0 0; }
   .qr { display: flex; gap: 18px; align-items: center; flex-wrap: wrap; margin-top: 16px; }
   .qr .code { background: #fff; padding: 10px; border-radius: 16px; width: 168px; height: 168px; flex: none; }
   .qr .code svg { width: 100%; height: 100%; }
@@ -62,7 +68,10 @@
 <main>
   <div class="wrap">
     <div class="card">
-      <a class="btn" href="fdroidrepos://@REPO_HOST_PATH@?fingerprint=@FINGERPRINT@">Add to F&#8209;Droid</a>
+      <a class="badge" href="fdroidrepos://@REPO_HOST_PATH@?fingerprint=@FINGERPRINT@" aria-label="Add this repository to F-Droid">
+        <img src="get-it-on-fdroid.png" alt="Get it on F-Droid" width="257" height="77">
+      </a>
+      <p class="hint">Tap the badge on your phone to add this repository to F&#8209;Droid.</p>
       <div class="qr">
         <div class="code">@QR_SVG@</div>
         <p>On another device? Scan this code in F&#8209;Droid, Droid&#8209;ify or Neo Store to add the repository.</p>
@@ -91,7 +100,8 @@
     </div>
 
     <p class="muted">Apps here are published from their GitHub releases and keep their developers' signing keys,
-      so a version installed from GitHub updates in place. Last updated @UPDATED@.</p>
+      so a version installed from GitHub updates in place. Last updated @UPDATED@.<br>
+      The “Get it on F&#8209;Droid” badge is provided by the F&#8209;Droid project.</p>
   </div>
 </main>
 </body>

@@ -11,7 +11,8 @@ https://jaycee-h.github.io/, repo at https://jaycee-h.github.io/repo). No app co
 - **Never change** the repo URL, the signing key (secrets `FDROID_KEYSTORE_BASE64` / `FDROID_KEYSTORE_PASS`,
   alias `xeu-repo`, fingerprint `1BDCB444EB7C5E4B1B5BF62809B942F532C6E0E486306ACBDD78B467B8F57227`) or the
   `gh-pages` publishing branch – users would have to re-add the repo.
-- Don't use other companies' logos in listings or the landing page.
+- Don't use other companies' logos in listings or the landing page. Exception: F-Droid's official
+  "Get it on F-Droid" badge (`site/get-it-on-fdroid.png`), which F-Droid provides for exactly this use.
 
 ## Layout
 

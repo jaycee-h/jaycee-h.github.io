@@ -5,6 +5,8 @@ A self-hosted [F-Droid](https://f-droid.org) repository for my Android apps, ser
 
 ## Add it
 
+[<img src="site/get-it-on-fdroid.png" alt="Get it on F-Droid" height="60">](https://jaycee-h.github.io/)
+
 Open https://jaycee-h.github.io/ on your phone and tap **Add to F-Droid**, or in F-Droid (Droid-ify, Neo Store)
 go to Settings → Repositories → + and enter:
 
