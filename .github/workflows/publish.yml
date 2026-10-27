@@ -43,6 +43,8 @@ jobs:
           FDROID_KEYSTORE_PASS: ${{ secrets.FDROID_KEYSTORE_PASS }}
         run: |
           set -euo pipefail
+          # Name the failing command in an annotation (raw logs aren't always at hand).
+          trap 'echo "::error::Build repo failed (line $LINENO): $BASH_COMMAND"' ERR
           mkdir -p work/repo/icons work/metadata
           cp -r metadata/. work/metadata/
           cp site/repo-icon.png work/repo/icons/icon.png
@@ -88,7 +90,11 @@ jobs:
           done < apps.txt
           ls -la repo
 
-          fdroid update --pretty
+          if ! fdroid update --pretty > update.log 2>&1; then
+            tail -n 25 update.log | sed 's/^/::error::fdroid: /'
+            exit 1
+          fi
+          tail -n 5 update.log
 
           # Every listed app must be in the index.
           python3 - <<'PY'
