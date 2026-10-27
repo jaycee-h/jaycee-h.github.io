@@ -18,7 +18,8 @@ https://jaycee-h.github.io/, repo at https://jaycee-h.github.io/repo). No app co
 - `apps.yml` – package name + GitHub repo per app.
 - `metadata/` – F-Droid listing per app (`<package>.yml`, `<package>/en-US/images/icon.png`).
 - `site/index.html` – landing page template (placeholders filled by `scripts/build_site.py`); `site/repo-icon.png`.
-- `.github/workflows/publish.yml` – builds with fdroidserver (apt), checks every listed app is indexed, publishes a
+- `.github/workflows/publish.yml` – builds with fdroidserver from PyPI (Ubuntu's package has an androguard too old
+  for current APKs), checks every listed app is indexed, publishes a
   single force-pushed commit to `gh-pages`. Scheduled runs skip publishing when `.source-digest` is unchanged.
 
 ## Notes
