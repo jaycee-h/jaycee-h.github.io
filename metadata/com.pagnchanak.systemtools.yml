@@ -9,7 +9,7 @@ IssueTracker: https://github.com/pagnchanak/android-system-tools/issues
 Changelog: https://github.com/pagnchanak/android-system-tools/releases
 
 AutoName: System Tools
-Summary: Root toolbox: systemize apps, work profile apps, root shell
+Summary: "Root toolbox for systemizing apps, work profile apps and a root shell"
 Description: |-
   System Tools is a personal toolbox for rooted Android devices (Magisk, KernelSU or APatch).
 
