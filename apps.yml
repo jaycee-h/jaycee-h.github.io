@@ -6,3 +6,5 @@ apps:
     repo: XEU-Forums/xeu-forums-app
   - package: com.baidu.searchbox
     repo: Andromi-Auto/andromi-auto
+  - package: com.pagnchanak.systemtools
+    repo: pagnchanak/android-system-tools

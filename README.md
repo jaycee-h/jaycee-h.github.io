@@ -22,6 +22,7 @@ Fingerprint: `1BDCB444EB7C5E4B1B5BF62809B942F532C6E0E486306ACBDD78B467B8F57227`
 | --- | --- |
 | XEU Forums – unofficial app for the Xiaomi.EU community forum | [XEU-Forums/xeu-forums-app](https://github.com/XEU-Forums/xeu-forums-app) |
 | Andromi Auto – Android Auto on the phone, mirrored to a Xiaomi car screen | [Andromi-Auto/andromi-auto](https://github.com/Andromi-Auto/andromi-auto) |
+| System Tools – root toolbox: systemize apps, work profile apps, root shell | [pagnchanak/android-system-tools](https://github.com/pagnchanak/android-system-tools) |
 
 ## How it works
 

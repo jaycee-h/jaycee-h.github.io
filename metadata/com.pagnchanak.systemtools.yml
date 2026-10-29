@@ -1,0 +1,24 @@
+# F-Droid listing for System Tools (APKs come from the app repo's GitHub releases; see apps.yml).
+Categories:
+  - System
+License: Unknown
+AuthorName: pagnchanak
+WebSite: https://github.com/pagnchanak/android-system-tools
+SourceCode: https://github.com/pagnchanak/android-system-tools
+IssueTracker: https://github.com/pagnchanak/android-system-tools/issues
+Changelog: https://github.com/pagnchanak/android-system-tools/releases
+
+AutoName: System Tools
+Summary: Root toolbox: systemize apps, work profile apps, root shell
+Description: |-
+  System Tools is a personal toolbox for rooted Android devices (Magisk, KernelSU or APatch).
+
+  * App Systemizer: turn user apps into system apps (priv-app or app) and de-systemize system apps,
+    keeping them as user apps or removing them completely. Everything lives in one systemless module
+    that applies on reboot and can be reverted.
+  * Work Profile Apps: enable any installed app in the work profile or another user, no store needed.
+  * Root Shell: run commands as root and read the output.
+  * Material 3 Expressive design with wallpaper (Monet) colours.
+  * Built-in update check for the Stable and Dev channels.
+
+  Needs root. Systemizing changes your system through a module, so use it at your own risk.
