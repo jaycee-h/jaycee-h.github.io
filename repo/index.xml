@@ -1,0 +1,169 @@
+<?xml version="1.0" encoding="utf-8"?>
+<fdroid>
+	<repo icon="icon.png" name="jaycee-h apps" pubkey="308204ea308202d2a003020102020900e0a118d6c6b76893300d06092a864886f70d01010c050030223120301e0603550403131758455520466f72756d7320462d44726f6964205265706f3020170d3236313032373135333035365a180f32303534303331343135333035365a30223120301e0603550403131758455520466f72756d7320462d44726f6964205265706f30820222300d06092a864886f70d01010105000382020f003082020a0282020100c6f93d5d012e456da82cf4240e4b84bc27643cd4fa2d36b7e2837c9d05d48c2b50c0f9b3864c814b5a5f36bd40bec5a8d5ac8192b99697786a7e2a5e2c211651ec887d887227021432c5d29246c65f9cce97abc2b992fcab7e66b0e274cb0e4f7bc4065b6ca3138f1ced4f5b4ef0e47fdaf19c877564554e46421696b0ab387aaac4dbe3f33b7fabbb3eafa919eb7bebda6c1531939b59eb0daacc7c1bda162878518a1022f9542810191de6a267c3fa00d56e23e43ab175d53066c585d8797a3046d715f2f8db84f810ca283f1244c4157f1657e501f07e209211f4c8094c73b36c6b363ccb1dca91678821ad70f1fb90ba39f8f18885fddaa202f1c6d376d99442599bd7c87bc74e2f451ff2b42556340c824322bd8792969695523c9f8830ccc470e1620ba51806f47fa4dbd1c9891e65a3c1159b1d81b47c22f7de6e1821d8104a7bb76160843ccb77d17994929dc2180210cf409f02dbc42fb8808ae3cba5980eb0107c46d28d9b6455d2d8de91263d030c584d3c361198a89ffdd3f8689be791a716426815e5179527f66ff43bd1ee2d3bda21e38b28c7d3fc2359a4135d480142a4072c1c1a653a663eee123c23be2fcbc96118eae2e1fde404a7523b25d402014b48df583a2ac2c5d1f3f4452dbcfc90a425cf66b73117536de8c57e6763105853ba1555333753f30583654a5ad731ff76514c78d6f6a11def069aff0203010001a321301f301d0603551d0e04160414bc2c07e903f23b0b978a4fbccefcd3b179e7b092300d06092a864886f70d01010c0500038202010094985f894c1a1fd4d14e33d8fd224db74930664e4eb6fced3a2012489d49633c4f5903a3084553310348d275a34771797227759604d3ae91d5617519b45b2bbd793fc713732bebd4993164fb19c97901dc30cf0f28be1e795ada344609a66bc98410e2e799c036509c3196add011252e78c0f0e8fb8eb4de939fb2c2863fe676d0704c39693640dd10e79275bc9869e2a5ecce4d27152bfc393b571174780e3a9a4a243d5b93a8e8f833cbb729617031699367ab56d171d44e4c967e03298ec8d48da7b07c8850c3dc1820a85f3fcefab861cfa0182d72fe158da9319bbdc3717fae4f3f21ef485341d057448ea49d3cf626e89e8268d86c954a4d280207b7a430f08dfddbd8101c9cb92255b4c616941936049520db3378816c352babb214eb378dac71527857f61c64975297784ca7dc8a07d1abe73ebebedade12d294e13e1010cd84b5d09202208b3039d01366694bb44cf3a057ab38732e684c42cecf0dbe29c55d01c9e1011b9c274cf804eb5275529116bb61450ba5fc3769710d7d6dd7d5fc85fd1696edec910aef4e1696f9b33889dcb4951b5294918338f053e3672f73f062a39b538ece9fb6d3a594bf1b09d784f82028741edf97137d650c33a901937504e8ca0d12981b2d57952013019d761ba281f1879f38d3cdaa3bfc937fa0c323d56e963594c02c1591190bcb8e6abd7a3f26609f8ec9233dabfd19462d" timestamp="1793267948" url="https://jaycee-h.github.io/repo" version="20002">
+		<description>Apps by jaycee-h, published from their GitHub releases. Stable releases only.</description>
+	</repo>
+	<application id="com.baidu.searchbox">
+		<id>com.baidu.searchbox</id>
+		<added>2026-10-29</added>
+		<lastupdated>2026-10-29</lastupdated>
+		<name>Andromi Auto</name>
+		<summary>Android Auto on the phone, shown on a Xiaomi car screen</summary>
+		<desc>Andromi Auto runs Android Auto on your phone and shows it in its own window, so HyperOS
+&quot;Xiaomi Interconnectivity&quot; can mirror it to the car screen.
+
+* Self mode: no USB cable or wireless head unit needed
+* Material 3 design with wallpaper (Monet) colours
+* Portrait and landscape switch for the different car window sizes
+* Optional automatic start when the car's Bluetooth connects (needs root setup)
+* Built-in update check for stable releases
+
+Based on Open Headunit (AGPL-3.0). Unofficial; not affiliated with Google, Xiaomi or Baidu.
+Uses the install id com.baidu.searchbox, so it cannot be installed next to the real Baidu app.</desc>
+		<license>AGPL-3.0-only</license>
+		<categories>Connectivity,System</categories>
+		<category>Connectivity</category>
+		<web>https://github.com/Andromi-Auto/andromi-auto</web>
+		<source>https://github.com/Andromi-Auto/andromi-auto</source>
+		<tracker>https://github.com/Andromi-Auto/andromi-auto/issues</tracker>
+		<changelog>https://github.com/Andromi-Auto/andromi-auto/releases</changelog>
+		<author>pagnchanak</author>
+		<marketversion></marketversion>
+		<marketvercode>2000000034</marketvercode>
+		<package>
+			<version>4.0.0</version>
+			<versioncode>2000000034</versioncode>
+			<apkname>Andromi-Auto-release.apk</apkname>
+			<hash type="sha256">554583b7e0af55a6a48aba78a5232cf19a3fe23a5ce00f2a677ccb51ba059b9b</hash>
+			<size>13823388</size>
+			<sdkver>16</sdkver>
+			<targetSdkVersion>36</targetSdkVersion>
+			<added>2026-10-29</added>
+			<sig>ef29281537e31c3f08c1685eadb24de8</sig>
+			<permissions>ACCESS_COARSE_LOCATION,ACCESS_FINE_LOCATION,ACCESS_NETWORK_STATE,ACCESS_SUPERUSER,ACCESS_WIFI_STATE,BLUETOOTH,BLUETOOTH_ADMIN,BLUETOOTH_ADVERTISE,BLUETOOTH_CONNECT,BLUETOOTH_SCAN,BROADCAST_STICKY,CHANGE_NETWORK_STATE,CHANGE_WIFI_STATE,FOREGROUND_SERVICE,FOREGROUND_SERVICE_CONNECTED_DEVICE,FOREGROUND_SERVICE_MEDIA_PLAYBACK,FOREGROUND_SERVICE_MICROPHONE,INTERNET,MODIFY_AUDIO_SETTINGS,NEARBY_WIFI_DEVICES,POST_NOTIFICATIONS,READ_EXTERNAL_STORAGE,READ_LOGS,READ_PHONE_STATE,RECEIVE_BOOT_COMPLETED,RECORD_AUDIO,REQUEST_INSTALL_PACKAGES,SYSTEM_ALERT_WINDOW,USE_FULL_SCREEN_INTENT,WAKE_LOCK,WRITE_EXTERNAL_STORAGE,WRITE_SETTINGS,com.baidu.searchbox.DYNAMIC_RECEIVER_NOT_EXPORTED_PERMISSION,moe.shizuku.manager.permission.API_V23</permissions>
+			<uses-permission maxSdkVersion="32" name="android.permission.READ_LOGS"/>
+			<nativecode>arm64-v8a,armeabi-v7a,x86,x86_64</nativecode>
+		</package>
+		<package>
+			<version>4.0.0-alpha</version>
+			<versioncode>2000000022</versioncode>
+			<apkname>Andromi-Auto-debug.apk</apkname>
+			<hash type="sha256">f3904cb449245905e8d40f16ea4e8869f20b7e9ebbe162a0af33dae57436903c</hash>
+			<size>21573377</size>
+			<sdkver>16</sdkver>
+			<targetSdkVersion>36</targetSdkVersion>
+			<added>2026-10-29</added>
+			<sig>ef29281537e31c3f08c1685eadb24de8</sig>
+			<permissions>ACCESS_COARSE_LOCATION,ACCESS_FINE_LOCATION,ACCESS_NETWORK_STATE,ACCESS_SUPERUSER,ACCESS_WIFI_STATE,BLUETOOTH,BLUETOOTH_ADMIN,BLUETOOTH_ADVERTISE,BLUETOOTH_CONNECT,BLUETOOTH_SCAN,BROADCAST_STICKY,CHANGE_NETWORK_STATE,CHANGE_WIFI_STATE,FOREGROUND_SERVICE,FOREGROUND_SERVICE_CONNECTED_DEVICE,FOREGROUND_SERVICE_MEDIA_PLAYBACK,FOREGROUND_SERVICE_MICROPHONE,INTERNET,MODIFY_AUDIO_SETTINGS,NEARBY_WIFI_DEVICES,POST_NOTIFICATIONS,READ_EXTERNAL_STORAGE,READ_LOGS,READ_PHONE_STATE,RECEIVE_BOOT_COMPLETED,RECORD_AUDIO,REQUEST_INSTALL_PACKAGES,SYSTEM_ALERT_WINDOW,USE_FULL_SCREEN_INTENT,WAKE_LOCK,WRITE_EXTERNAL_STORAGE,WRITE_SETTINGS,com.baidu.searchbox.DYNAMIC_RECEIVER_NOT_EXPORTED_PERMISSION,moe.shizuku.manager.permission.API_V23</permissions>
+			<uses-permission maxSdkVersion="32" name="android.permission.READ_LOGS"/>
+			<nativecode>arm64-v8a,armeabi-v7a,x86,x86_64</nativecode>
+		</package>
+	</application>
+	<application id="com.pagnchanak.systemtools">
+		<id>com.pagnchanak.systemtools</id>
+		<added>2026-10-29</added>
+		<lastupdated>2026-10-29</lastupdated>
+		<name>System Tools</name>
+		<summary>Root toolbox for systemizing apps, work profile apps and a root shell</summary>
+		<desc>System Tools is a personal toolbox for rooted Android devices (Magisk, KernelSU or APatch).
+
+* App Systemizer: turn user apps into system apps (priv-app or app) and de-systemize system apps,
+  keeping them as user apps or removing them completely. Everything lives in one systemless module
+  that applies on reboot and can be reverted.
+* Work Profile Apps: enable any installed app in the work profile or another user, no store needed.
+* Root Shell: run commands as root and read the output.
+* Material 3 Expressive design with wallpaper (Monet) colours.
+* Built-in update check for the Stable and Dev channels.
+
+Needs root. Systemizing changes your system through a module, so use it at your own risk.</desc>
+		<license>Unknown</license>
+		<categories>System</categories>
+		<category>System</category>
+		<web>https://github.com/jaycee-h/android-system-tools</web>
+		<source>https://github.com/jaycee-h/android-system-tools</source>
+		<tracker>https://github.com/jaycee-h/android-system-tools/issues</tracker>
+		<changelog>https://github.com/jaycee-h/android-system-tools/releases</changelog>
+		<author>pagnchanak</author>
+		<marketversion></marketversion>
+		<marketvercode>10</marketvercode>
+		<package>
+			<version>0.3.1</version>
+			<versioncode>10</versioncode>
+			<apkname>SystemTools-0.3.1.apk</apkname>
+			<hash type="sha256">63a2bdaeb088e084aa845a71987360ca16f05f60f8456a11ee81bd645a36da54</hash>
+			<size>2856471</size>
+			<sdkver>29</sdkver>
+			<targetSdkVersion>37</targetSdkVersion>
+			<added>2026-10-29</added>
+			<sig>dc527c80ca33d689fe438224b27d92d4</sig>
+			<permissions>INTERNET,QUERY_ALL_PACKAGES,REQUEST_INSTALL_PACKAGES,com.pagnchanak.systemtools.DYNAMIC_RECEIVER_NOT_EXPORTED_PERMISSION</permissions>
+			<nativecode>arm64-v8a,armeabi-v7a,x86,x86_64</nativecode>
+		</package>
+		<package>
+			<version>0.3.0</version>
+			<versioncode>7</versioncode>
+			<apkname>SystemTools-0.3.0.apk</apkname>
+			<hash type="sha256">254e53201768f7b8612f35324659316b42f22af99b3e5dd07e684b68471e61b0</hash>
+			<size>2856471</size>
+			<sdkver>29</sdkver>
+			<targetSdkVersion>37</targetSdkVersion>
+			<added>2026-10-29</added>
+			<sig>554e8dd449a734dbc09f0ea052dc69cc</sig>
+			<permissions>INTERNET,QUERY_ALL_PACKAGES,REQUEST_INSTALL_PACKAGES,com.pagnchanak.systemtools.DYNAMIC_RECEIVER_NOT_EXPORTED_PERMISSION</permissions>
+			<nativecode>arm64-v8a,armeabi-v7a,x86,x86_64</nativecode>
+		</package>
+		<package>
+			<version>0.3.0</version>
+			<versioncode>4</versioncode>
+			<apkname>SystemTools-build4.apk</apkname>
+			<hash type="sha256">e96181430f223aa4ff3b21e4689f3b182e4335590f7fb85f0c5419a4c30b9028</hash>
+			<size>2807227</size>
+			<sdkver>29</sdkver>
+			<targetSdkVersion>37</targetSdkVersion>
+			<added>2026-10-29</added>
+			<sig>554e8dd449a734dbc09f0ea052dc69cc</sig>
+			<permissions>QUERY_ALL_PACKAGES,com.pagnchanak.systemtools.DYNAMIC_RECEIVER_NOT_EXPORTED_PERMISSION</permissions>
+			<nativecode>arm64-v8a,armeabi-v7a,x86,x86_64</nativecode>
+		</package>
+	</application>
+	<application id="dev.xeu.forums">
+		<id>dev.xeu.forums</id>
+		<added>2026-10-29</added>
+		<lastupdated>2026-10-29</lastupdated>
+		<name>XEU Forums</name>
+		<summary>Unofficial app for the Xiaomi.EU community forum</summary>
+		<desc>XEU Forums is an unofficial Android app for the Xiaomi.EU community forum.
+
+* Browse every forum and thread in a clean Material 3 design, in light and dark mode
+* Search threads and posts, and jump to new posts
+* My devices: follow the phones you own and get one feed of their forums
+* Log in, reply, quote and start threads, and switch between several accounts
+* Alerts, direct messages and watched threads inside the app
+* Notifications for forum alerts and new direct messages
+
+Not affiliated with Xiaomi or Xiaomi.EU.</desc>
+		<license>Unknown</license>
+		<categories>Internet,Reading</categories>
+		<category>Internet</category>
+		<web>https://github.com/XEU-Forums/xeu-forums-app</web>
+		<source>https://github.com/XEU-Forums/xeu-forums-app</source>
+		<tracker>https://github.com/XEU-Forums/xeu-forums-app/issues</tracker>
+		<changelog>https://github.com/XEU-Forums/xeu-forums-app/releases</changelog>
+		<author>pagnchanak</author>
+		<marketversion></marketversion>
+		<marketvercode>18</marketvercode>
+		<package>
+			<version>1.0.0</version>
+			<versioncode>18</versioncode>
+			<apkname>XEU-Forums-1.0.0.apk</apkname>
+			<hash type="sha256">ce6571a37c832e3bb495bb10436cbcac515d552c9bb68710715e6ea33ee858ec</hash>
+			<size>13842512</size>
+			<sdkver>26</sdkver>
+			<targetSdkVersion>36</targetSdkVersion>
+			<added>2026-10-29</added>
+			<sig>6b1b597d6c790c3310b92b169155c6fc</sig>
+			<permissions>ACCESS_NETWORK_STATE,FOREGROUND_SERVICE,INTERNET,POST_NOTIFICATIONS,RECEIVE_BOOT_COMPLETED,REQUEST_INSTALL_PACKAGES,WAKE_LOCK,dev.xeu.forums.DYNAMIC_RECEIVER_NOT_EXPORTED_PERMISSION</permissions>
+			<nativecode>arm64-v8a,armeabi-v7a,x86,x86_64</nativecode>
+		</package>
+	</application>
+</fdroid>

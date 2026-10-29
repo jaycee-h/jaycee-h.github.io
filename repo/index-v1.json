@@ -1,0 +1,571 @@
+{
+  "repo": {
+    "timestamp": 1793267948000,
+    "version": 20002,
+    "name": "jaycee-h apps",
+    "icon": "icon.png",
+    "address": "https://jaycee-h.github.io/repo",
+    "description": "Apps by jaycee-h, published from their GitHub releases. Stable releases only."
+  },
+  "requests": {
+    "install": [],
+    "uninstall": []
+  },
+  "apps": [
+    {
+      "authorName": "pagnchanak",
+      "categories": [
+        "Connectivity",
+        "System"
+      ],
+      "changelog": "https://github.com/Andromi-Auto/andromi-auto/releases",
+      "suggestedVersionCode": "2000000034",
+      "description": "Andromi Auto runs Android Auto on your phone and shows it in its own window, so HyperOS\n\"Xiaomi Interconnectivity\" can mirror it to the car screen.\n\n* Self mode: no USB cable or wireless head unit needed\n* Material 3 design with wallpaper (Monet) colours\n* Portrait and landscape switch for the different car window sizes\n* Optional automatic start when the car's Bluetooth connects (needs root setup)\n* Built-in update check for stable releases\n\nBased on Open Headunit (AGPL-3.0). Unofficial; not affiliated with Google, Xiaomi or Baidu.\nUses the install id com.baidu.searchbox, so it cannot be installed next to the real Baidu app.",
+      "issueTracker": "https://github.com/Andromi-Auto/andromi-auto/issues",
+      "license": "AGPL-3.0-only",
+      "sourceCode": "https://github.com/Andromi-Auto/andromi-auto",
+      "summary": "Android Auto on the phone, shown on a Xiaomi car screen",
+      "webSite": "https://github.com/Andromi-Auto/andromi-auto",
+      "added": 1793267946000,
+      "packageName": "com.baidu.searchbox",
+      "lastUpdated": 1793267947000,
+      "localized": {
+        "en-US": {
+          "icon": "icon_PVzgsgKPpJozZEznjTjtX2X_chEP_AxULS1yZ3dbaq4=.png",
+          "name": "Andromi Auto"
+        }
+      }
+    },
+    {
+      "authorName": "pagnchanak",
+      "categories": [
+        "System"
+      ],
+      "changelog": "https://github.com/jaycee-h/android-system-tools/releases",
+      "suggestedVersionCode": "10",
+      "description": "System Tools is a personal toolbox for rooted Android devices (Magisk, KernelSU or APatch).\n\n* App Systemizer: turn user apps into system apps (priv-app or app) and de-systemize system apps,\n  keeping them as user apps or removing them completely. Everything lives in one systemless module\n  that applies on reboot and can be reverted.\n* Work Profile Apps: enable any installed app in the work profile or another user, no store needed.\n* Root Shell: run commands as root and read the output.\n* Material 3 Expressive design with wallpaper (Monet) colours.\n* Built-in update check for the Stable and Dev channels.\n\nNeeds root. Systemizing changes your system through a module, so use it at your own risk.",
+      "issueTracker": "https://github.com/jaycee-h/android-system-tools/issues",
+      "license": "Unknown",
+      "sourceCode": "https://github.com/jaycee-h/android-system-tools",
+      "summary": "Root toolbox for systemizing apps, work profile apps and a root shell",
+      "webSite": "https://github.com/jaycee-h/android-system-tools",
+      "added": 1793267947000,
+      "packageName": "com.pagnchanak.systemtools",
+      "lastUpdated": 1793267948000,
+      "localized": {
+        "en-US": {
+          "icon": "icon_j7kkicKT9a-BW--zpZ1sKLbcwFcqb9CtZntceAhQIwI=.png",
+          "name": "System Tools"
+        }
+      }
+    },
+    {
+      "authorName": "pagnchanak",
+      "categories": [
+        "Internet",
+        "Reading"
+      ],
+      "changelog": "https://github.com/XEU-Forums/xeu-forums-app/releases",
+      "suggestedVersionCode": "18",
+      "description": "XEU Forums is an unofficial Android app for the Xiaomi.EU community forum.\n\n* Browse every forum and thread in a clean Material 3 design, in light and dark mode\n* Search threads and posts, and jump to new posts\n* My devices: follow the phones you own and get one feed of their forums\n* Log in, reply, quote and start threads, and switch between several accounts\n* Alerts, direct messages and watched threads inside the app\n* Notifications for forum alerts and new direct messages\n\nNot affiliated with Xiaomi or Xiaomi.EU.",
+      "issueTracker": "https://github.com/XEU-Forums/xeu-forums-app/issues",
+      "license": "Unknown",
+      "sourceCode": "https://github.com/XEU-Forums/xeu-forums-app",
+      "summary": "Unofficial app for the Xiaomi.EU community forum",
+      "webSite": "https://github.com/XEU-Forums/xeu-forums-app",
+      "added": 1793267948000,
+      "packageName": "dev.xeu.forums",
+      "lastUpdated": 1793267948000,
+      "localized": {
+        "en-US": {
+          "icon": "icon_W6DZURJi-5Yn9EU1ai78OkfFItaNL9gBT3C4U2CMCUs=.png",
+          "name": "XEU Forums"
+        }
+      }
+    }
+  ],
+  "packages": {
+    "com.baidu.searchbox": [
+      {
+        "added": 1793267947000,
+        "apkName": "Andromi-Auto-release.apk",
+        "hash": "554583b7e0af55a6a48aba78a5232cf19a3fe23a5ce00f2a677ccb51ba059b9b",
+        "hashType": "sha256",
+        "minSdkVersion": 16,
+        "nativecode": [
+          "arm64-v8a",
+          "armeabi-v7a",
+          "x86",
+          "x86_64"
+        ],
+        "packageName": "com.baidu.searchbox",
+        "sig": "ef29281537e31c3f08c1685eadb24de8",
+        "signer": "1bbfc7282b6c2d2ce958e110c1402125aa93c741e4015f61911dece7fa212666",
+        "size": 13823388,
+        "targetSdkVersion": 36,
+        "uses-permission": [
+          [
+            "android.permission.REQUEST_INSTALL_PACKAGES",
+            null
+          ],
+          [
+            "android.permission.ACCESS_WIFI_STATE",
+            null
+          ],
+          [
+            "android.permission.CHANGE_WIFI_STATE",
+            null
+          ],
+          [
+            "android.permission.ACCESS_FINE_LOCATION",
+            null
+          ],
+          [
+            "android.permission.ACCESS_COARSE_LOCATION",
+            null
+          ],
+          [
+            "android.permission.NEARBY_WIFI_DEVICES",
+            null
+          ],
+          [
+            "android.permission.SYSTEM_ALERT_WINDOW",
+            null
+          ],
+          [
+            "android.permission.WAKE_LOCK",
+            null
+          ],
+          [
+            "android.permission.CHANGE_NETWORK_STATE",
+            null
+          ],
+          [
+            "android.permission.INTERNET",
+            null
+          ],
+          [
+            "android.permission.ACCESS_NETWORK_STATE",
+            null
+          ],
+          [
+            "android.permission.ACCESS_SUPERUSER",
+            null
+          ],
+          [
+            "android.permission.READ_PHONE_STATE",
+            null
+          ],
+          [
+            "android.permission.BROADCAST_STICKY",
+            null
+          ],
+          [
+            "android.permission.BLUETOOTH",
+            null
+          ],
+          [
+            "android.permission.BLUETOOTH_ADMIN",
+            null
+          ],
+          [
+            "android.permission.BLUETOOTH_CONNECT",
+            null
+          ],
+          [
+            "android.permission.BLUETOOTH_SCAN",
+            null
+          ],
+          [
+            "android.permission.BLUETOOTH_ADVERTISE",
+            null
+          ],
+          [
+            "android.permission.WRITE_EXTERNAL_STORAGE",
+            null
+          ],
+          [
+            "android.permission.MODIFY_AUDIO_SETTINGS",
+            null
+          ],
+          [
+            "android.permission.RECORD_AUDIO",
+            null
+          ],
+          [
+            "android.permission.WRITE_SETTINGS",
+            null
+          ],
+          [
+            "android.permission.RECEIVE_BOOT_COMPLETED",
+            null
+          ],
+          [
+            "android.permission.POST_NOTIFICATIONS",
+            null
+          ],
+          [
+            "android.permission.FOREGROUND_SERVICE",
+            null
+          ],
+          [
+            "android.permission.FOREGROUND_SERVICE_CONNECTED_DEVICE",
+            null
+          ],
+          [
+            "android.permission.FOREGROUND_SERVICE_MEDIA_PLAYBACK",
+            null
+          ],
+          [
+            "android.permission.FOREGROUND_SERVICE_MICROPHONE",
+            null
+          ],
+          [
+            "android.permission.USE_FULL_SCREEN_INTENT",
+            null
+          ],
+          [
+            "android.permission.READ_LOGS",
+            32
+          ],
+          [
+            "com.baidu.searchbox.DYNAMIC_RECEIVER_NOT_EXPORTED_PERMISSION",
+            null
+          ],
+          [
+            "moe.shizuku.manager.permission.API_V23",
+            null
+          ],
+          [
+            "android.permission.READ_EXTERNAL_STORAGE",
+            null
+          ]
+        ],
+        "versionCode": 2000000034,
+        "versionName": "4.0.0"
+      },
+      {
+        "added": 1793267946000,
+        "apkName": "Andromi-Auto-debug.apk",
+        "hash": "f3904cb449245905e8d40f16ea4e8869f20b7e9ebbe162a0af33dae57436903c",
+        "hashType": "sha256",
+        "minSdkVersion": 16,
+        "nativecode": [
+          "arm64-v8a",
+          "armeabi-v7a",
+          "x86",
+          "x86_64"
+        ],
+        "packageName": "com.baidu.searchbox",
+        "sig": "ef29281537e31c3f08c1685eadb24de8",
+        "signer": "1bbfc7282b6c2d2ce958e110c1402125aa93c741e4015f61911dece7fa212666",
+        "size": 21573377,
+        "targetSdkVersion": 36,
+        "uses-permission": [
+          [
+            "android.permission.REQUEST_INSTALL_PACKAGES",
+            null
+          ],
+          [
+            "android.permission.ACCESS_WIFI_STATE",
+            null
+          ],
+          [
+            "android.permission.CHANGE_WIFI_STATE",
+            null
+          ],
+          [
+            "android.permission.ACCESS_FINE_LOCATION",
+            null
+          ],
+          [
+            "android.permission.ACCESS_COARSE_LOCATION",
+            null
+          ],
+          [
+            "android.permission.NEARBY_WIFI_DEVICES",
+            null
+          ],
+          [
+            "android.permission.SYSTEM_ALERT_WINDOW",
+            null
+          ],
+          [
+            "android.permission.WAKE_LOCK",
+            null
+          ],
+          [
+            "android.permission.CHANGE_NETWORK_STATE",
+            null
+          ],
+          [
+            "android.permission.INTERNET",
+            null
+          ],
+          [
+            "android.permission.ACCESS_NETWORK_STATE",
+            null
+          ],
+          [
+            "android.permission.ACCESS_SUPERUSER",
+            null
+          ],
+          [
+            "android.permission.READ_PHONE_STATE",
+            null
+          ],
+          [
+            "android.permission.BROADCAST_STICKY",
+            null
+          ],
+          [
+            "android.permission.BLUETOOTH",
+            null
+          ],
+          [
+            "android.permission.BLUETOOTH_ADMIN",
+            null
+          ],
+          [
+            "android.permission.BLUETOOTH_CONNECT",
+            null
+          ],
+          [
+            "android.permission.BLUETOOTH_SCAN",
+            null
+          ],
+          [
+            "android.permission.BLUETOOTH_ADVERTISE",
+            null
+          ],
+          [
+            "android.permission.WRITE_EXTERNAL_STORAGE",
+            null
+          ],
+          [
+            "android.permission.MODIFY_AUDIO_SETTINGS",
+            null
+          ],
+          [
+            "android.permission.RECORD_AUDIO",
+            null
+          ],
+          [
+            "android.permission.WRITE_SETTINGS",
+            null
+          ],
+          [
+            "android.permission.RECEIVE_BOOT_COMPLETED",
+            null
+          ],
+          [
+            "android.permission.POST_NOTIFICATIONS",
+            null
+          ],
+          [
+            "android.permission.FOREGROUND_SERVICE",
+            null
+          ],
+          [
+            "android.permission.FOREGROUND_SERVICE_CONNECTED_DEVICE",
+            null
+          ],
+          [
+            "android.permission.FOREGROUND_SERVICE_MEDIA_PLAYBACK",
+            null
+          ],
+          [
+            "android.permission.FOREGROUND_SERVICE_MICROPHONE",
+            null
+          ],
+          [
+            "android.permission.USE_FULL_SCREEN_INTENT",
+            null
+          ],
+          [
+            "android.permission.READ_LOGS",
+            32
+          ],
+          [
+            "com.baidu.searchbox.DYNAMIC_RECEIVER_NOT_EXPORTED_PERMISSION",
+            null
+          ],
+          [
+            "moe.shizuku.manager.permission.API_V23",
+            null
+          ],
+          [
+            "android.permission.READ_EXTERNAL_STORAGE",
+            null
+          ]
+        ],
+        "versionCode": 2000000022,
+        "versionName": "4.0.0-alpha"
+      }
+    ],
+    "com.pagnchanak.systemtools": [
+      {
+        "added": 1793267947000,
+        "apkName": "SystemTools-0.3.0.apk",
+        "hash": "254e53201768f7b8612f35324659316b42f22af99b3e5dd07e684b68471e61b0",
+        "hashType": "sha256",
+        "minSdkVersion": 29,
+        "nativecode": [
+          "arm64-v8a",
+          "armeabi-v7a",
+          "x86",
+          "x86_64"
+        ],
+        "packageName": "com.pagnchanak.systemtools",
+        "sig": "554e8dd449a734dbc09f0ea052dc69cc",
+        "signer": "0aebc2e2c703db4cb9d1d6b202b68447c089fbc7b8a892bd8168da8da72854f9",
+        "size": 2856471,
+        "targetSdkVersion": 37,
+        "uses-permission": [
+          [
+            "android.permission.QUERY_ALL_PACKAGES",
+            null
+          ],
+          [
+            "android.permission.INTERNET",
+            null
+          ],
+          [
+            "android.permission.REQUEST_INSTALL_PACKAGES",
+            null
+          ],
+          [
+            "com.pagnchanak.systemtools.DYNAMIC_RECEIVER_NOT_EXPORTED_PERMISSION",
+            null
+          ]
+        ],
+        "versionCode": 7,
+        "versionName": "0.3.0"
+      },
+      {
+        "added": 1793267948000,
+        "apkName": "SystemTools-build4.apk",
+        "hash": "e96181430f223aa4ff3b21e4689f3b182e4335590f7fb85f0c5419a4c30b9028",
+        "hashType": "sha256",
+        "minSdkVersion": 29,
+        "nativecode": [
+          "arm64-v8a",
+          "armeabi-v7a",
+          "x86",
+          "x86_64"
+        ],
+        "packageName": "com.pagnchanak.systemtools",
+        "sig": "554e8dd449a734dbc09f0ea052dc69cc",
+        "signer": "0aebc2e2c703db4cb9d1d6b202b68447c089fbc7b8a892bd8168da8da72854f9",
+        "size": 2807227,
+        "targetSdkVersion": 37,
+        "uses-permission": [
+          [
+            "android.permission.QUERY_ALL_PACKAGES",
+            null
+          ],
+          [
+            "com.pagnchanak.systemtools.DYNAMIC_RECEIVER_NOT_EXPORTED_PERMISSION",
+            null
+          ]
+        ],
+        "versionCode": 4,
+        "versionName": "0.3.0"
+      },
+      {
+        "added": 1793267948000,
+        "apkName": "SystemTools-0.3.1.apk",
+        "hash": "63a2bdaeb088e084aa845a71987360ca16f05f60f8456a11ee81bd645a36da54",
+        "hashType": "sha256",
+        "minSdkVersion": 29,
+        "nativecode": [
+          "arm64-v8a",
+          "armeabi-v7a",
+          "x86",
+          "x86_64"
+        ],
+        "packageName": "com.pagnchanak.systemtools",
+        "sig": "dc527c80ca33d689fe438224b27d92d4",
+        "signer": "2f4c16c4e1bc76ae629e11bdd368971770dd715e22bf12f3b45f90f86132ad6b",
+        "size": 2856471,
+        "targetSdkVersion": 37,
+        "uses-permission": [
+          [
+            "android.permission.QUERY_ALL_PACKAGES",
+            null
+          ],
+          [
+            "android.permission.INTERNET",
+            null
+          ],
+          [
+            "android.permission.REQUEST_INSTALL_PACKAGES",
+            null
+          ],
+          [
+            "com.pagnchanak.systemtools.DYNAMIC_RECEIVER_NOT_EXPORTED_PERMISSION",
+            null
+          ]
+        ],
+        "versionCode": 10,
+        "versionName": "0.3.1"
+      }
+    ],
+    "dev.xeu.forums": [
+      {
+        "added": 1793267948000,
+        "apkName": "XEU-Forums-1.0.0.apk",
+        "hash": "ce6571a37c832e3bb495bb10436cbcac515d552c9bb68710715e6ea33ee858ec",
+        "hashType": "sha256",
+        "minSdkVersion": 26,
+        "nativecode": [
+          "arm64-v8a",
+          "armeabi-v7a",
+          "x86",
+          "x86_64"
+        ],
+        "packageName": "dev.xeu.forums",
+        "sig": "6b1b597d6c790c3310b92b169155c6fc",
+        "signer": "8871493434cd03e71a2f2f002ec337224d898375ae68c23169a8c474138495e1",
+        "size": 13842512,
+        "targetSdkVersion": 36,
+        "uses-permission": [
+          [
+            "android.permission.INTERNET",
+            null
+          ],
+          [
+            "android.permission.ACCESS_NETWORK_STATE",
+            null
+          ],
+          [
+            "android.permission.POST_NOTIFICATIONS",
+            null
+          ],
+          [
+            "android.permission.REQUEST_INSTALL_PACKAGES",
+            null
+          ],
+          [
+            "android.permission.WAKE_LOCK",
+            null
+          ],
+          [
+            "android.permission.RECEIVE_BOOT_COMPLETED",
+            null
+          ],
+          [
+            "android.permission.FOREGROUND_SERVICE",
+            null
+          ],
+          [
+            "dev.xeu.forums.DYNAMIC_RECEIVER_NOT_EXPORTED_PERMISSION",
+            null
+          ]
+        ],
+        "versionCode": 18,
+        "versionName": "1.0.0"
+      }
+    ]
+  }
+}
