@@ -7,4 +7,4 @@ apps:
   - package: com.baidu.searchbox
     repo: Andromi-Auto/andromi-auto
   - package: com.pagnchanak.systemtools
-    repo: pagnchanak/android-system-tools
+    repo: jaycee-h/android-system-tools

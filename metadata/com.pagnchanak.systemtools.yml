@@ -3,10 +3,10 @@ Categories:
   - System
 License: Unknown
 AuthorName: pagnchanak
-WebSite: https://github.com/pagnchanak/android-system-tools
-SourceCode: https://github.com/pagnchanak/android-system-tools
-IssueTracker: https://github.com/pagnchanak/android-system-tools/issues
-Changelog: https://github.com/pagnchanak/android-system-tools/releases
+WebSite: https://github.com/jaycee-h/android-system-tools
+SourceCode: https://github.com/jaycee-h/android-system-tools
+IssueTracker: https://github.com/jaycee-h/android-system-tools/issues
+Changelog: https://github.com/jaycee-h/android-system-tools/releases
 
 AutoName: System Tools
 Summary: "Root toolbox for systemizing apps, work profile apps and a root shell"
